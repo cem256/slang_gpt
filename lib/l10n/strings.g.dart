@@ -3,10 +3,10 @@
 /// Original: lib/l10n
 /// To regenerate, run: `dart run slang`
 ///
-/// Locales: 3
-/// Strings: 22 (7 per locale)
+/// Locales: 2
+/// Strings: 13 (6 per locale)
 ///
-/// Built on 2024-07-07 at 11:27 UTC
+/// Built on 2024-07-07 at 19:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -26,7 +26,6 @@ const AppLocale _baseLocale = AppLocale.en;
 /// - if (LocaleSettings.currentLocale == AppLocale.en) // locale check
 enum AppLocale with BaseAppLocale<AppLocale, Translations> {
 	en(languageCode: 'en', build: Translations.build),
-	ar(languageCode: 'ar', build: _StringsAr.build),
 	tr(languageCode: 'tr', build: _StringsTr.build);
 
 	const AppLocale({required this.languageCode, this.scriptCode, this.countryCode, required this.build}); // ignore: unused_element
@@ -157,44 +156,6 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	Map<String, String> get locales => {
 		'en': 'English',
 		'tr': 'Turkish',
-		'ar': 'Arabic',
-	};
-}
-
-// Path: <root>
-class _StringsAr extends Translations {
-	/// You can call this constructor and build your own translation instance of this locale.
-	/// Constructing via the enum [AppLocale.build] is preferred.
-	_StringsAr.build({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver})
-		: assert(overrides == null, 'Set "translation_overrides: true" in order to enable this feature.'),
-		  $meta = TranslationMetadata(
-		    locale: AppLocale.ar,
-		    overrides: overrides ?? {},
-		    cardinalResolver: cardinalResolver,
-		    ordinalResolver: ordinalResolver,
-		  ),
-		  super.build(cardinalResolver: cardinalResolver, ordinalResolver: ordinalResolver) {
-		super.$meta.setFlatMapFunction($meta.getTranslation); // copy base translations to super.$meta
-		$meta.setFlatMapFunction(_flatMapFunction);
-	}
-
-	/// Metadata for the translations of <ar>.
-	@override final TranslationMetadata<AppLocale, Translations> $meta;
-
-	/// Access flat map
-	@override dynamic operator[](String key) => $meta.getTranslation(key) ?? super.$meta.getTranslation(key);
-
-	@override late final _StringsAr _root = this; // ignore: unused_field
-
-	// Translations
-	@override String get intro_title => 'مرحبًا بك في Slang GPT';
-	@override String get intro_description => 'توضح هذه التطبيق استخدام حزمة slang_gpt لتطبيقات Flutter.';
-	@override String get highlight_title => 'إنشاء ترجمات موجهة بالسياق';
-	@override String get highlight_description => 'إنشاء ترجمات موجهة بالسياق باستخدام GPT';
-	@override Map<String, String> get locales => {
-		'en': 'الإنجليزية',
-		'tr': 'التركية',
-		'ar': 'العربية',
 	};
 }
 
@@ -231,7 +192,6 @@ class _StringsTr extends Translations {
 	@override Map<String, String> get locales => {
 		'en': 'İngilizce',
 		'tr': 'Türkçe',
-		'ar': 'Arapça',
 	};
 }
 
@@ -248,22 +208,6 @@ extension on Translations {
 			case 'highlight_description': return 'Generate context-aware aware translatinons with GPT';
 			case 'locales.en': return 'English';
 			case 'locales.tr': return 'Turkish';
-			case 'locales.ar': return 'Arabic';
-			default: return null;
-		}
-	}
-}
-
-extension on _StringsAr {
-	dynamic _flatMapFunction(String path) {
-		switch (path) {
-			case 'intro_title': return 'مرحبًا بك في Slang GPT';
-			case 'intro_description': return 'توضح هذه التطبيق استخدام حزمة slang_gpt لتطبيقات Flutter.';
-			case 'highlight_title': return 'إنشاء ترجمات موجهة بالسياق';
-			case 'highlight_description': return 'إنشاء ترجمات موجهة بالسياق باستخدام GPT';
-			case 'locales.en': return 'الإنجليزية';
-			case 'locales.tr': return 'التركية';
-			case 'locales.ar': return 'العربية';
 			default: return null;
 		}
 	}
@@ -278,7 +222,6 @@ extension on _StringsTr {
 			case 'highlight_description': return 'GPT ile bağlama duyarlı çeviriler oluşturun';
 			case 'locales.en': return 'İngilizce';
 			case 'locales.tr': return 'Türkçe';
-			case 'locales.ar': return 'Arapça';
 			default: return null;
 		}
 	}

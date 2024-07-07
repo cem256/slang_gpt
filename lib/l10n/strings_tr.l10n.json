@@ -5,7 +5,6 @@
   "highlight_description": "GPT ile bağlama duyarlı çeviriler oluşturun",
   "locales(map)": {
     "en": "İngilizce",
-    "tr": "Türkçe",
-    "ar": "Arapça"
+    "tr": "Türkçe"
   }
 }

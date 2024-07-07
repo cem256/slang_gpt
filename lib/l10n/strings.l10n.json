@@ -6,7 +6,6 @@
   "highlight_description": "Generate context-aware aware translatinons with GPT",
   "locales(map)": {
     "en": "English",
-    "tr": "Turkish",
-    "ar": "Arabic"
+    "tr": "Turkish"
   }
 }
