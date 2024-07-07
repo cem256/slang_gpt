@@ -1,0 +1,26 @@
+name: example
+description: Example project using slang and slang_gpt.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Localization
+  slang: ^3.31.0
+  slang_flutter: ^3.31.0
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # Localization
+  slang_gpt: ^0.10.2
+  # Linter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,11 @@
+{
+  "intro_title": "Slang GPT'ye Hoş Geldiniz",
+  "intro_description": "Bu uygulama, Flutter uygulamaları için slang_gpt paketinin kullanımını göstermektedir.",
+  "highlight_title": "Bağlama Duyarlı Çeviriler Oluşturun",
+  "highlight_description": "GPT ile bağlama duyarlı çeviriler oluşturun",
+  "locales(map)": {
+    "en": "İngilizce",
+    "tr": "Türkçe",
+    "ar": "Arapça"
+  }
+}

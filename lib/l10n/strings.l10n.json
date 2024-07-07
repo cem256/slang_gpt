@@ -1,0 +1,12 @@
+{
+  "app_title(ignoreGpt)": "Slang GPT",
+  "intro_title": "Welcome to Slang GPT",
+  "intro_description": "This application demonstrates the usage of the slang_gpt package for Flutter apps.",
+  "highlight_title": "Generate Context-Aware Translations",
+  "highlight_description": "Generate context-aware aware translatinons with GPT",
+  "locales(map)": {
+    "en": "English",
+    "tr": "Turkish",
+    "ar": "Arabic"
+  }
+}
